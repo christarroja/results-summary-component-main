@@ -30,8 +30,12 @@
   color: hsl(241, 100%, 89%);
 }
 
+.white {
+  color: white;
+}
+
 p {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 html, body {
@@ -48,25 +52,33 @@ html, body {
 
 .card {
   background-color: white;
-  width: 600px;
-  height: 450px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
-  /* flex-direction: column; */
   border-radius: 25px;
+  flex-direction: row;
 }
 
 .result {
   background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
-  width: 50%;
-  /* height: 100%; */
-  color: hsl(221, 100%, 96%, 50%);
+  width: 275px;
+  height: fit-content;
+  color: hsla(221, 100%, 96%, 75%);
   border-radius: 25px;
+  padding: 20px;
+}
+
+.content {
+  margin: 10px 20px 20px 20px;
   text-align: center;
-  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+}
+
+.title {
+  padding: 10px 0 10px 0;
+  font-weight: 400;
 }
 
 .score {
@@ -81,7 +93,6 @@ html, body {
   /* align-items: center; */
   justify-content: center;
   margin: 20px 0 20px 0;
-
 }
 
 .score-number {
@@ -94,3 +105,27 @@ html, body {
   height: 100%;
 }
 
+.subtext {
+  padding: 0 10px 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    align-items: start;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .result {
+    width: 100%;
+    padding: 0;
+    border-radius: 0 0 25px 25px;
+  }
+
+  .subtext {
+    padding: 0 30px 20px 30px;
+  }
+}
